@@ -1,8 +1,6 @@
 # QUANTAID  
-**Quantum-Proof Vault for AI Training Data**  
-Built for BlockDAG Amazing Chain Race – Further & Faster Track
 
-![QUANTAID Hero](https://qjdninphreeazznjpsyl.supabase.co/storage/v1/object/public/project_uploads/quantaid-hero-banner.png?.png)
+![QUANTAID Hero](https://github.com/pioneerdevs/QuantAId/blob/main/preview.png?raw=true)
 
 **One-sentence pitch**  
 Upload your AI training data once → it gets scanned for risks, encrypted with math that survives quantum computers, and stamped forever on BlockDAG in under 2 seconds.
@@ -30,7 +28,6 @@ You keep full control. Everything important happens in your browser:
 4. A tiny proof (just one hash) is stamped on BlockDAG forever in a few seconds  
 5. You get a green checkmark + a permanent explorer link
 
-No tokens. No gas wars. No trust required.
 
 Your data becomes the most secure asset in your company instead of the biggest liability.
 
@@ -38,14 +35,12 @@ Your data becomes the most secure asset in your company instead of the biggest l
 ### Why BlockDAG Makes This Possible
 
 - Parallel blocks → sub-second finality for our tiny proofs  
-- Already showed 15K+ TPS on testnet  
-- Zero speculation, zero drama — perfect for enterprise
+- Already showed 1K+ TPS on testnet  
+- Zero speculation, zero drama — perfect for rising AI firms
 
 ### Live on Primordial Testnet Right Now
 
 - Smart Contract (verified): `0x0478d7a0648Ae10a20BDcef5dd3086C636760Ab2` 
-- Frontend: https://quantaid.xyz  
-- Backend + AI scanner is being setup  
 
 
 ### Quick Start for Judges & Users
