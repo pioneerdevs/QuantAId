@@ -10,7 +10,7 @@
     "vercel-build": "next build",
     "now-build": "next build",
     "build:deploy": "next build",
-    "deploy": "npm run build:deploy" 
+    "deploy": "npm run build:deploy"
   },
   "dependencies": {
     "@reown/appkit": "^1.2.1",
@@ -35,6 +35,7 @@
     "eslint-config-next": "15.0.2",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5"
   }
 }

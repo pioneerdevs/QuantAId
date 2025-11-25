@@ -2,10 +2,7 @@
 
 import React from "react";
 import ConnectButton from "@/components/ConnectButton";
-import { useAccount } from "wagmi";
-
 export default function CTASection() {
-  const { isConnected } = useAccount();
 
   return (
     <section className="py-20 px-6 bg-gradient-to-r from-[#8b5cf6] via-[#a78bff] to-[#8b5cf6]">

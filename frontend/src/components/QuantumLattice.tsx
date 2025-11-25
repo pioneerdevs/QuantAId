@@ -11,8 +11,8 @@ export default function QuantumLattice({ className = "" }: { className?: string 
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let width = (canvas.width = canvas.clientWidth * devicePixelRatio);
-    let height = (canvas.height = canvas.clientHeight * devicePixelRatio);
+    let width = (canvas!.width = canvas!.clientWidth * devicePixelRatio);
+    let height = (canvas!.height = canvas!.clientHeight * devicePixelRatio);
 
     let t = 0;
     const particles: { x: number; y: number; r: number; v: number }[] = [];
@@ -21,8 +21,9 @@ export default function QuantumLattice({ className = "" }: { className?: string 
     }
 
     function resize() {
-      width = canvas.width = canvas.clientWidth * devicePixelRatio;
-      height = canvas.height = canvas.clientHeight * devicePixelRatio;
+      if (!canvasRef.current) return;
+      width = canvasRef.current.width = canvasRef.current.clientWidth * devicePixelRatio;
+      height = canvasRef.current.height = canvasRef.current.clientHeight * devicePixelRatio;
     }
 
     window.addEventListener("resize", resize);

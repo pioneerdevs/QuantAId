@@ -2,11 +2,9 @@
 
 import React from "react";
 import QuantumLattice from "@/components/QuantumLattice";
-import { useAccount } from "wagmi";
 import ConnectButton from "@/components/ConnectButton";
 
 export default function Hero() {
-  const { isConnected } = useAccount();
 
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center text-center overflow-hidden">
