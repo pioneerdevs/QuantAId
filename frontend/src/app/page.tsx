@@ -2,8 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import ConnectButton from "@/components/ConnectButton";
-import { useWeb3Modal } from "@web3modal/wagmi/react";
-import { useAccount, useConnect, useDisconnect } from "wagmi";
+import { useAccount, useDisconnect } from "wagmi";
 
 export default function Home() {
   const { address, isConnected } = useAccount();
