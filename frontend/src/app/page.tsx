@@ -1,42 +1,25 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import ConnectButton from "@/components/ConnectButton";
-import { useAccount, useDisconnect } from "wagmi";
+import React from "react";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import StatsCards from "@/components/StatsCards";
+import HowItWorks from "@/components/HowItWorks";
+import WhyBlockDAG from "@/components/WhyBlockDAG";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
-  const { address, isConnected } = useAccount();
-  // const { open } = useWeb3Modal();
-  const { disconnect } = useDisconnect();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-[#070E1B]">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
-        <h1 className="text-2xl font-bold text-white mb-8">
-          BlockDAG Starter Kit
-        </h1>
-        <div className="bg-gray-800 rounded-lg p-6">
-          {!mounted ? (
-            <ConnectButton />
-          ) : isConnected ? (
-            <>
-              <p className="text-white">Connected to {address}</p>
-              <button
-                onClick={() => disconnect()}
-                className="mt-4 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
-              >
-                Disconnect
-              </button>
-            </>
-          ) : (
-            <ConnectButton />
-          )}
-        </div>
+    <main className="min-h-screen bg-[#0b0b1f] text-white overflow-x-hidden">
+      <Navbar />
+      <div className="pt-24">
+        <Hero />
+        <StatsCards />
+        <HowItWorks />
+        <WhyBlockDAG />
+        <CTASection />
+        <Footer />
       </div>
     </main>
   );
