@@ -2,56 +2,74 @@
 ![QUANTAID Hero](https://github.com/pioneerdevs/QuantAId/blob/main/preview.png?raw=true)
 
 **One-sentence pitch**  
-Upload your AI training data once → scanned, quantum-encrypted in your browser, and permanently stamped on BlockDAG in <2 seconds.
+A simple way to scan your AI data, encrypt it with post-quantum security, and anchor a proof on BlockDAG in a few seconds.
 
 ---
 
-### The Quiet Crisis Every AI Founder Loses Sleep Over  
-Your model is only as strong as the data you trained it on.  
-That data is private, expensive, and the #1 target for tomorrow’s quantum attacks.  
+## What QUANTAID Solves
+AI models rely heavily on the data used to train them.  
+That data is private, expensive and extremely sensitive.  
+The challenge is simple: today’s encryption will not survive future quantum computers.
 
-Attackers are already stealing encrypted datasets today (“harvest now, decrypt later”).  
-When quantum computers arrive (~2030), today’s encryption becomes paper.  
-One breach → one lawsuit → one headline → your company is gone.  
-Clearview AI paid $50 M in 2025 for exactly this. Nobody wants to be next.
+Attackers are already collecting encrypted datasets now because once quantum machines mature, they can break classical encryption easily.  
+One breach is enough to destroy trust in any AI company.
 
-### QUANTAID Turns That Fear Into Your Biggest Competitive Advantage  
-Everything sensitive happens in the user’s browser (zero trust needed):  
-1. Drag & drop any dataset  
-2. Instant AI scan for PII, poisoning, bias  
-3. Client-side quantum-safe encryption (NIST Kyber-1024)  
-4. A tiny proof (just one hash) lands on BlockDAG forever  
-5. You walk away with a green checkmark + permanent explorer link  
+QUANTAID protects AI data with encryption designed to survive future quantum threats.
 
-Your data is no longer a liability — it’s the most bulletproof asset you own.
+---
 
-### Why BlockDAG Is the Perfect Home for This (And Why We Love It)  
-Most chains choke on real-world throughput or charge ridiculous gas.  
-BlockDAG does something no one else can:
+## What QUANTAID Actually Does
+When a user uploads data, everything happens safely inside their browser:
 
-- Parallel blocks → sub-second finality even in batches  
-- Already proven 1K+ TPS on testnet with zero congestion  
-- Feels like a normal database, works like an immutable fortress  
+1. Upload any dataset  
+2. QUANTAID scans for PII, poisoning or bias  
+3. The dataset is encrypted with post-quantum security (Kyber-1024)  
+4. Only a tiny proof is sent to BlockDAG  
+5. The user receives a clean verification link they can share anywhere
 
-That’s why we chose BlockDAG as the **only** chain we trust to be the eternal receipt for the world’s most valuable AI datasets.
+Your AI stays powerful.  
+Your private data stays locked behind encryption that even future quantum computers can’t crack.
 
-### The Flywheel That Grows the Entire BlockDAG Ecosystem  
-Every AI startup that adopts QUANTAID becomes a permanent BlockDAG user:
+---
 
-| Today → One startup | Tomorrow → BlockDAG gains |
-|---------------------|---------------------------|
-| 1 team uploads 50 GB | 1 live contract, 100+ daily proofs, real transaction volume |
-| 10 teams | 1,000+ daily proofs, dozens of nodes syncing their proofs |
-| 100 teams | Millions of on-chain proofs per month, petabytes referenced |
-| 1,000 teams | BlockDAG becomes the de-facto “source of truth” layer for AI data worldwide |
+## Why BlockDAG Works Perfectly With This
+We need speed, low cost and a chain that can handle real usage.
 
-We’re not just building a vault.  
-We’re bringing the entire next wave of AI companies — and their terabytes of daily activity — straight to BlockDAG.
+BlockDAG provides:
 
-**Live on Primordial Testnet right now**  
-Verified contract: [`0x0478d7a0648Ae10a20BDcef5dd3086C636760Ab2`](https://explorer.blockdag.network/address/0x0478d7a0648Ae10a20BDcef5dd3086C636760Ab2)
+- Fast confirmation  
+- High throughput  
+- A smooth developer experience  
+- Reliability for long-term proof storage  
 
-### Quick Start (Takes 30 seconds)
+This makes BlockDAG a solid home for permanent, tamper-proof AI data proofs.
+
+---
+
+## Ecosystem Value
+Every team that uses QUANTAID becomes a repeat BlockDAG user.  
+More AI companies means more proofs, more volume and more consistent activity on the chain.
+
+We’re not just storing proofs.  
+We’re building a path for AI companies to anchor their entire trust layer on BlockDAG.
+
+---
+
+## What We Completed in This Wave
+For this wave, we focused on making QUANTAID easier to understand and stronger technically:
+
+- Improved the encryption functionality  
+- Added clearer explanations based on Wave One feedback  
+- Wrote proper documentation and a readable README  
+- Created a clean landing page for quick understanding  
+- Built a mock backend and a basic AI simulation to show how the system will work  
+- Set the foundation for deeper technical upgrades in later waves  
+
+This wave focused on clarity, structure and strengthening the core security idea.
+
+---
+
+## Quick Start
 ```bash
 git clone https://github.com/pioneerdevs/QuantAid
 cd QuantAid/frontend
