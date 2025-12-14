@@ -1,76 +1,136 @@
 # QUANTAID  
+Quantum-Armored AI Data Proofs for the Post-Quantum Era  
+
 ![QUANTAID Hero](https://github.com/pioneerdevs/QuantAId/blob/main/preview.png?raw=true)
 
-**One-sentence pitch**  
-A simple way to scan your AI data, encrypt it with post-quantum security, and anchor a proof on BlockDAG in a few seconds.
+QUANTAID helps AI builders secure sensitive datasets with post-quantum encryption and store lightweight, verifiable proofs on BlockDAG.
+
+This repository contains a working MVP that you can run locally to see encryption and on-chain proof anchoring in action.
 
 ---
 
-## What QUANTAID Solves
-AI models rely heavily on the data used to train them.  
-That data is private, expensive and extremely sensitive.  
-The challenge is simple: today’s encryption will not survive future quantum computers.
+## 1. The Problem (Utility & Problem Fit)
+AI systems rely on private and valuable data.  
+Once that data leaks or is altered, trust is gone.
 
-Attackers are already collecting encrypted datasets now because once quantum machines mature, they can break classical encryption easily.  
-One breach is enough to destroy trust in any AI company.
+Current encryption methods are vulnerable to future quantum attacks, and most teams have no simple way to:
+- Prove a dataset was secured correctly
+- Verify it has not been altered
+- Do this without putting large data on-chain
 
-QUANTAID protects AI data with encryption designed to survive future quantum threats.
-
----
-
-## What QUANTAID Actually Does
-When a user uploads data, everything happens safely inside their browser:
-
-1. Upload any dataset  
-2. QUANTAID scans for PII, poisoning or bias  
-3. The dataset is encrypted with post-quantum security (Kyber-1024)  
-4. Only a tiny proof is sent to BlockDAG  
-5. The user receives a clean verification link they can share anywhere
-
-Your AI stays powerful.  
-Your private data stays locked behind encryption that even future quantum computers can’t crack.
+QUANTAID solves this by separating **heavy data handling off-chain** and **lightweight verification on BlockDAG**.
 
 ---
 
-## Why BlockDAG Works Perfectly With This
-We need speed, low cost and a chain that can handle real usage.
+## 2. What QUANTAID Does (Clear Product Explanation)
+QUANTAID is a client-side tool that allows users to:
 
-BlockDAG provides:
+- Scan AI datasets for basic risks
+- Encrypt the dataset using post-quantum cryptography
+- Generate a cryptographic proof (hash + metadata)
+- Store that proof on BlockDAG
+- Share a verification link that anyone can independently check
 
-- Fast confirmation  
-- High throughput  
-- A smooth developer experience  
-- Reliability for long-term proof storage  
-
-This makes BlockDAG a solid home for permanent, tamper-proof AI data proofs.
-
----
-
-## Ecosystem Value
-Every team that uses QUANTAID becomes a repeat BlockDAG user.  
-More AI companies means more proofs, more volume and more consistent activity on the chain.
-
-We’re not just storing proofs.  
-We’re building a path for AI companies to anchor their entire trust layer on BlockDAG.
+No raw data is ever sent to the blockchain.
 
 ---
 
-## What We Completed in This Wave
-For this wave, we focused on making QUANTAID easier to understand and stronger technically:
+## 3. How BlockDAG Is Used (Technical Execution)
+BlockDAG is used strictly where it makes sense: **immutable verification**.
 
-- Improved the encryption functionality  
-- Added clearer explanations based on Wave One feedback  
-- Wrote proper documentation and a readable README  
-- Created a clean landing page for quick understanding  
-- Built a mock backend and a basic AI simulation to show how the system will work  
-- Set the foundation for deeper technical upgrades in later waves  
+What goes on BlockDAG:
+- Dataset hash
+- Encryption metadata
+- Timestamped proof reference
 
-This wave focused on clarity, structure and strengthening the core security idea.
+What stays off-chain:
+- The actual dataset
+- Encryption keys
+- AI preprocessing logic
+
+This keeps transactions lightweight, fast, and scalable while still anchoring trust in the BlockDAG network.
 
 ---
 
-## Quick Start
+## 4. Architecture & Tools (Working MVP)
+This MVP focuses on real execution, not theory.
+
+**Frontend**
+- Next.js (React)
+- TailwindCSS
+- Client-side encryption flow
+
+**Backend**
+- Node.js API
+- Proof generation and submission logic
+
+**Security**
+- NIST Kyber-1024 (Post-Quantum Encryption)
+- Local key generation and encryption
+
+**Blockchain**
+- BlockDAG test interaction for proof storage
+- Transaction hash returned for verification
+
+You can run the project locally to:
+- Encrypt a dataset
+- Generate a proof
+- Anchor that proof on BlockDAG
+
+---
+
+## 5. Community Involvement & Ecosystem Impact
+QUANTAID is designed to grow *with* the BlockDAG community:
+
+- Developers can build plugins for additional dataset scans
+- Researchers can publish public proof references
+- Startups can integrate QUANTAID as a verification layer
+- Community contributors can extend BlockDAG proof formats
+
+Every proof submitted increases BlockDAG usage while remaining lightweight and repeatable.
+
+---
+
+## 6. User Experience
+The entire flow is designed to be non-technical:
+
+1. Upload dataset  
+2. Click “Secure & Verify”  
+3. Receive proof link  
+
+No blockchain knowledge required.
+
+This wave focused heavily on simplifying explanations, reducing jargon, and making the product understandable in seconds.
+
+---
+
+## 7. Scalability
+QUANTAID scales naturally because:
+- Large files never hit the chain
+- Proofs are tiny and cheap
+- The system supports repeated usage per user
+- Future integrations can batch or automate proofs
+
+This keeps BlockDAG efficient even at high usage.
+
+---
+
+## 8. Iteration From Feedback (Wave 1 → Wave 3)
+Based on judge feedback, we:
+- Simplified the product explanation
+- Reduced technical jargon
+- Clarified BlockDAG’s exact role
+- Shipped a working encryption flow
+- Enabled proof storage on BlockDAG
+- Improved documentation and repo clarity
+
+This README reflects those iterations directly.
+
+---
+
+## 9. Run the MVP Locally
 ```bash
 git clone https://github.com/pioneerdevs/QuantAid
 cd QuantAid/frontend
-npm install && npm run dev
+npm install
+npm run dev
