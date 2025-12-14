@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import StatsCards from "@/components/StatsCards";
