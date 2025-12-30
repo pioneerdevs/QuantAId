@@ -4,12 +4,12 @@ import React from 'react';
 import DashboardUpload from '../../components/DashboardUpload';
 import ProofExplorer from '../../components/ProofExplorer';
 import { useDisconnect, useAccount } from 'wagmi';
-import { useWeb3Modal } from '@web3modal/wagmi/react';
+import { useAppKit } from '@reown/appkit/react';
 
 export default function DashboardPage() {
   const { disconnect } = useDisconnect();
   const { isConnected, address } = useAccount();
-  const web3Modal = useWeb3Modal();
+  const appKit = useAppKit();
 
   async function handleLogout() {
     try {
@@ -18,8 +18,8 @@ export default function DashboardPage() {
       console.warn('Error disconnecting', err);
     }
     try {
-      // close web3modal UI if present
-      (web3Modal as any)?.close?.();
+      // close appkit UI if present
+      (appKit as any)?.close?.();
     } catch (err) {
       // ignore
     }

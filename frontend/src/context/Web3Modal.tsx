@@ -1,9 +1,10 @@
 "use client";
 
 import React, { ReactNode } from "react";
-import { config, projectId } from "@/configs";
+import { wagmiAdapter, projectId } from "@/configs";
+import { morphHolesky } from "viem/chains";
 
-import { createWeb3Modal } from "@web3modal/wagmi/react";
+import { createAppKit } from "@reown/appkit/react";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
@@ -15,11 +16,20 @@ const queryClient = new QueryClient();
 if (!projectId) throw new Error("Project ID is not defined");
 
 // Create modal
-createWeb3Modal({
-  wagmiConfig: config,
+createAppKit({
+  adapters: [wagmiAdapter],
+  networks: [morphHolesky],
   projectId,
-  enableAnalytics: true, // Optional - defaults to your Cloud configuration
-  enableOnramp: true, // Optional - false as default
+  metadata: {
+    name: "QuantAId",
+    description: "QuantAId App",
+    url: "https://quantaid.com",
+    icons: ["https://avatars.githubusercontent.com/u/37784886"],
+  },
+  features: {
+    analytics: true,
+    onramp: true,
+  },
 });
 
 export default function Web3ModalProvider({
@@ -30,7 +40,7 @@ export default function Web3ModalProvider({
   initialState?: State;
 }) {
   return (
-    <WagmiProvider config={config} initialState={initialState}>
+    <WagmiProvider config={wagmiAdapter.wagmiConfig} initialState={initialState}>
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     </WagmiProvider>
   );

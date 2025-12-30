@@ -43,8 +43,8 @@ export default function ConnectButton({ className, showAddress = false }: Props)
     );
   }
 
-  // Not connected: render the web3modal web component which opens the modal
+  // Not connected: render the appkit web component which opens the modal
   // forward className for styling
   // @ts-expect-error web component
-  return <w3m-button className={className} />;
+  return <appkit-button className={className} />;
 }
